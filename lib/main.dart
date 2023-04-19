@@ -1,20 +1,40 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:anim_search_bar/anim_search_bar.dart';
+import "dart:ui" show Color;
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+void main() => runApp(BMICalculator());
 
+class BMICalculator extends StatelessWidget {
+  final Widget cardWidget;
   @override
-  _HomeState createState() => _HomeState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: InputPage(),
+    );
+  }
 }
 
-class _HomeState extends State<Home> {
-  final textController1 = TextEditingController();
-  String country = "Pakistan";
-  String cityName = "Multan";
-  String feals = "15";
-  String wind = "2.0";
-  double temp = 290;
+class InputPage extends StatefulWidget {
+  @override
+  _InputPageState createState() => _InputPageState();
+}
+
+class _InputPageState extends State<InputPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('BMI CALCULATOR'),
+      ),
+      body: Column(
+          children: <Widget>[
+      Expanded(
+      child: Row(
+          children: <Widget>[
+          Expanded(
+          child:Container(
+          margin: EdgeInsets.all(15.0),
+      decoration: BoxDecoration(
+          color: Color(0xFF1D1E33),
+          borderRadius: BorderRadius.circular(10.0)),
+    ),
+    ),
