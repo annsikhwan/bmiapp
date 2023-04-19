@@ -63,3 +63,37 @@ class _InputPageState extends State<InputPage> {
     borderRadius: BorderRadius.circular(10.0)),
     ),
     ),
+      Expanded(
+        child: Row(
+          children: [
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                    color: Color(0xFF1D1E33),
+                    borderRadius: BorderRadius.circular(10.0)),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.all(15.0),
+                decoration: BoxDecoration(
+                    color: Color(0xFF1D1E33),
+                    borderRadius: BorderRadius.circular(10.0)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    ],
+    ),
+    ),
+    ),
+          ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+      ),
+    );
+  }
+}
